@@ -23,7 +23,7 @@ resource "aws_lb_target_group" "twot_tg" {
   health_check {
    enabled = true
    healthy_threshold = 5
-   interval = 30
+   interval = 300
    path = "/"
    port = "traffic-port"
    protocol = "HTTP"
