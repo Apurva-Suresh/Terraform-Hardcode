@@ -2,7 +2,7 @@
 #Public key - utilized by EC2
 resource "aws_key_pair" "TF-key" {
   key_name   = "TF-key"
-  public_key = tls_private_key.ed25519-tf.public_key_pem
+  public_key = tls_private_key.ed25519-tf.public_key_openssh
 }
 # ED25519 key (Private Key)
 resource "tls_private_key" "ed25519-tf" {
