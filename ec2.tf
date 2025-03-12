@@ -21,8 +21,8 @@ resource "aws_instance" "webserver1" {
   associate_public_ip_address = true
   availability_zone           = "us-east-1a"
   instance_type               = "t2.micro"
-  subnet_id                   = "aws_subnet.pubsub_1"
-  vpc_security_group_ids      = ["aws_security_group.public_sg"]
+  subnet_id                   = "aws_subnet.pubsub_1.id"
+  vpc_security_group_ids      = ["aws_security_group.public_sg.id"]
   tenancy                     = "default"
   
   user_data = <<EOF
@@ -41,8 +41,8 @@ resource "aws_instance" "webserver2" {
   associate_public_ip_address = true
   availability_zone           = "us-east-1b"
   instance_type               = "t2.micro"
-  subnet_id                   = "aws_subnet.pubsub_2"
-  vpc_security_group_ids      = ["aws_security_group.public_sg"]
+  subnet_id                   = "aws_subnet.pubsub_2.id"
+  vpc_security_group_ids      = ["aws_security_group.public_sg.id"]
   tenancy                     = "default"
   
   user_data = <<EOF
