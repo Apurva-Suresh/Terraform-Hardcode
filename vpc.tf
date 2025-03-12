@@ -16,11 +16,6 @@ resource "aws_internet_gateway" "twot_igw" {
   }
 }
 
-resource "aws_internet_gateway_attachment" "igw_attachment" {
-  internet_gateway_id = aws_internet_gateway.twot_igw.id
-  vpc_id              = aws_vpc.twot_vpc.id
-}
-
 #Public-Subnet-1
 resource "aws_subnet" "pubsub_1" {
   vpc_id     = aws_vpc.twot_vpc.id
