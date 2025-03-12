@@ -2,7 +2,7 @@ resource "aws_lb" "twot_alb" {
   name               = "twot-alb"
   internal           = false
   load_balancer_type = "application"
-  security_groups    = ["aws_security_group.alb_sg"]
+  security_groups    = ["aws_security_group.alb_sg.id"]
   subnets            = ["aws_subnet.pubsub_1.id, aws_subnet.pubsub_2.id"]
 
   enable_deletion_protection = false
