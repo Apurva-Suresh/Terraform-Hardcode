@@ -1,7 +1,7 @@
 #DB subnet group
 resource "aws_db_subnet_group" "twot-db-sg" {
   name       = "twot-db-sg"
-  subnet_ids = ["aws_subnet.privsub_1.id", "aws_subnet.privsub_2.id"]
+  subnet_ids = ["aws_subnet.privsub_1.id, aws_subnet.privsub_2.id"]
 
   tags = {
     Name = "Twot-DB subnet group"
